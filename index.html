@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- lower case i edit -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caitlin Smith - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <div class="container">
+            <div id="branding">
+                <!-- <h1><span class="highlight">My</span> Portfolio</h1> -->
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Showcase (hero) section -->
+    <section id="showcase" class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4 animate-fade-in">Caitlin Smith</h1>
+            <div class="space-y-4">
+                <p class="text-xl animate-slide-in-left">
+                    <span class="font-semibold">Full Stack Developer</span> with expertise in:
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-lg">
+                    <span class="bg-white text-purple-600 px-3 py-1 rounded-full animate-pop-in">C# |</span>
+                    <span class="bg-white text-purple-600 px-3 py-1 rounded-full animate-pop-in">JavaScript |</span>
+                    <span class="bg-white text-purple-600 px-3 py-1 rounded-full animate-pop-in">React |</span>
+                    <span class="bg-white text-purple-600 px-3 py-1 rounded-full animate-pop-in">ASP.NET Core |</span>
+                    <span class="bg-white text-purple-600 px-3 py-1 rounded-full animate-pop-in">MySQL</span>
+                </div>
+                <p class="text-lg italic animate-slide-in-right">
+                    Passionate about crafting elegant solutions and embracing new challenges.
+                </p>
+                <p class="text-lg animate-fade-in">
+                    Eager to contribute to a <span class="font-semibold">dynamic environment</span> that fosters 
+                    <span class="underline">innovation</span> and <span class="underline">professional growth</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Main content container -->
+    <div class="container">
+<!-- Projects section -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="carousel-container">
+        <button class="carousel-button prev">&lt;</button>
+        <div class="carousel">
+            <div class="project-slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Venice_Old_Town_Lagoon_Aerial_View.jpg?20130513205208" alt="Itinerary Designer" class="project-image">
+                <h3>Itinerary Designer</h3>
+                <p>Itinerary Designer helps travelers plan personalized itineraries aligned with their specific needs and interests, saving hours of research. The app allows users to create, view, update, and delete multiple itineraries with unique features, and calculates costs per person and party.</p>
+                <div class="project-links">
+                    <a href="https://github.com/Fantasticer-Four/LiftOff-Capstone" target="_blank" class="btn">View Code</a>
+                    <a href="https://www.youtube.com/watch?v=dRRNUsvStOM&t=1s" target="_blank" class="btn">Watch Demo</a>
+                </div>
+            </div>
+            <div class="project-slide">
+                <img src="/api/placeholder/400/300" alt="Project 2" class="project-image">
+                <h3>Project 2</h3>
+                <p>This is a placeholder for my second project. It had great key features and technologies used in it.</p>
+                <div class="project-links">
+                    <a href="#" target="_blank" class="btn">View Code</a>
+                    <a href="#" target="_blank" class="btn">Watch Demo</a>
+                </div>
+            </div>
+            <div class="project-slide">
+                <img src="/api/placeholder/400/300" alt="Project 3" class="project-image">
+                <h3>Project 3</h3>
+                <p>This is a placeholder for my third project.This has information about my actual project, explaining its purpose and the problems it solves.</p>
+                <div class="project-links">
+                    <a href="#" target="_blank" class="btn">View Code</a>
+                    <a href="#" target="_blank" class="btn">Watch Demo</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-button next">&gt;</button>
+    </div>
+</section>
+
+        <!-- Experience section -->
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div id="experience-list"></div>
+        </section>
+
+        <!-- Education section -->
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div id="education-list"></div>
+        </section>
+
+        <!-- About Me section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am a passionate developer with a keen interest in creating user-friendly web applications. I love learning new technologies and solving complex problems.</p>
+        </section>
+    </div>
+
+    <!-- Footer with contact information -->
+    <footer id="contact">
+        <div class="container">
+            <h3>Contact Me</h3>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/caitlin-smith-669719186/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/caitlinrsmith" target="_blank">GitHub</a></li>
+                <li><a href="mailto:catie12smith@gmail.com">Email</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        // Updated data for experience and education from resume
+        const experiences = [
+            {
+                title: 'Web Developer',
+                company: 'BWorks Inventory System — STL | Hack Accelerator Project',
+                year: 'August 2024 - Present',
+                description: [
+                    'Created a tailored web application according to the users’ specifications.',
+                    'Partnered with stakeholders to make recommendations for hardware/software solutions.',
+                    'Engaged in collaborative consultation to provide an innovative and scalable inventory system.',
+                    'Informed clients of progress, concerns, issues, or other matters pertaining to the project.',
+                    'Utilized strong organizational and time management skills to maximize quality output.',
+                    'Tech Stack: Angular, Firebase, Javascript'
+                ]
+            },
+            {
+                title: 'Itinerary Designer',
+                company: 'LaunchCode Capstone Project',
+                year: '',
+                description: [
+                    'Curated travel itinerary events according to users’ desired specifications.',
+                    'Wrote code, monitored, maintained, tested, and debugged a web application.',
+                    'Designed tests and utilized test-driven development skills to ensure quality, safety, and reliability.',
+                    'Developed an event form to filter events based on user preferences, such as restaurant or boat trip.',
+                    'Tech Stack: C#, JavaScript, React, ASP.NET Core, MySQL, Node.js, Free Forex API, CSS (Bootstrap, Flexbox, Grid)'
+                ]
+            },
+            {
+                title: 'Private Instructor',
+                company: 'Self-employed',
+                year: 'January 2018 - Present',
+                description: [
+                    'Curated detailed lesson plans and instruction techniques for 100+ individuals’ requirements.',
+                    'Arranged professional environments supportive to a diverse range of students’ learning.',
+                    'Fostered a collaborative and productive environment for producing high-quality work.'
+                ]
+            },
+            {
+                title: 'Lead Instructor',
+                company: 'Literacy KC',
+                year: 'January 2024 - March 2024',
+                description: [
+                    'Maintained accurate and current documentation of learner progression for 30+ individuals.',
+                    'Targeted instruction to achieve a 10% or greater improvement in a skill set for each learner.',
+                    'Composed scaffolded lessons according to 20+ various learner needs and experiences.'
+                ]
+            },
+            {
+                title: 'Bather',
+                company: 'PetSmart Grooming Salon Shawnee, KS',
+                year: 'December 2022 - December 2023',
+                description: [
+                    'Met with 15+ customers per day to assess needs and provide satisfactory solutions.',
+                    'Optimized time management and collaborated with coworkers to maximize quality output.',
+                    'Provided clear expectations, updates, and summaries of grooms to customers.'
+                ]
+            }
+        ];
+    
+        const education = [
+            { degree: 'Web Development', school: 'LaunchCode', year: '2024' },
+            { degree: 'Bachelors of Arts, International Studies, Korean Language', school: 'University of Missouri - Columbia', year: '2014 - 2018' }
+        ];
+    
+        // Function to create and append elements to a parent element
+        function populateSection(data, parentId, createElementFunction) {
+            const parentElement = document.getElementById(parentId);
+            data.forEach(item => {
+                const element = createElementFunction(item);
+                parentElement.appendChild(element);
+            });
+        }
+    
+        // Create experience list item
+        function createExperienceElement(exp) {
+            const item = document.createElement('div');
+            const description = exp.description ? `<ul>${exp.description.map(desc => `<li>${desc}</li>`).join('')}</ul>` : '';
+            item.innerHTML = `<h3>${exp.title} at ${exp.company}</h3><p>${exp.year}</p>${description}`;
+            return item;
+        }
+    
+        // Create education list item
+        function createEducationElement(edu) {
+            const item = document.createElement('div');
+            item.innerHTML = `<h3>${edu.degree}</h3><p>${edu.school}, ${edu.year}</p>`;
+            return item;
+        }
+    
+        // Populate experience and education sections
+        populateSection(experiences, 'experience-list', createExperienceElement);
+        populateSection(education, 'education-list', createEducationElement);
+    </script>
+    
+    <script src="project-carousel.js"></script>
+</body>
+</html>
