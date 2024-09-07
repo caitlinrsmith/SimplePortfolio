@@ -70,24 +70,23 @@ header a:hover {
 }
 
 /* Showcase (hero) section styles */
-/* Showcase (hero) section styles */
 #showcase {
     min-height: 400px;
     background: linear-gradient(to right, #9333ea, #3b82f6); /* Gradient background */
     text-align: center;
     color: #fff;
+    position: relative;
+    overflow: hidden;
 }
 
 #showcase h1 {
     margin-top: 100px;
     font-size: 55px;
-    margin-bottom: 10px;
 }
 
 #showcase p {
     font-size: 20px;
 }
-
 
 /* Project styles */
 .project {
@@ -177,6 +176,14 @@ footer a:hover {
     to { transform: scale(1); opacity: 1; }
 }
 
+@keyframes moveIcons {
+    0% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-30px) rotate(90deg); }
+    50% { transform: translateY(0) rotate(180deg); }
+    75% { transform: translateY(30px) rotate(270deg); }
+    100% { transform: translateY(0) rotate(360deg); }
+}
+
 .animate-fade-in {
     animation: fadeIn 1s ease-out;
 }
@@ -218,14 +225,13 @@ footer a:hover {
 .main-heading {
     font-size: 4rem;
     margin-bottom: 1rem;
-    transition: text-shadow 0.3s ease;
-    animation: fadeIn 1s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Static black outline */
 }
 
 .role {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    animation: slideInLeft 1s ease-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Static black outline */
 }
 
 .skills {
@@ -328,6 +334,7 @@ footer a:hover {
 .icon-container {
     position: absolute;
     inset: 0;
+    z-index: 0;
 }
 
 .tech-icon {
@@ -335,4 +342,5 @@ footer a:hover {
     font-size: 2rem;
     color: #1e3a8a;
     transition: all 1s ease-in-out;
+    animation: moveIcons 3s linear infinite;
 }

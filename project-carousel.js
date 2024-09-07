@@ -20,69 +20,32 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     });
 
-    // Showcase functionality
-    const iconContainer = document.getElementById('icon-container');
-    const mainHeading = document.getElementById('main-heading');
-    const roleText = document.getElementById('role-text');
+    // Moving icons in the background
+    const iconContainer = document.querySelector('.icon-container');
 
     const icons = [
-        `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-camera"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>`,
-        `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-computer"><rect width="14" height="8" x="5" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 18h2"/><path d="M12 18h6"/></svg>`,
-        `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>`,
-        `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`,
-        `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>`
+        `<svg xmlns="http://www.w3.org/2000/svg" class="icon-tech" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M4 8h16M4 16h16"/></svg>`,
+        `<svg xmlns="http://www.w3.org/2000/svg" class="icon-tech" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`,
     ];
 
-    function createIcon(iconSvg, x, y) {
+    icons.forEach((icon, index) => {
         const iconElement = document.createElement('div');
         iconElement.className = 'tech-icon';
-        iconElement.innerHTML = iconSvg;
-        iconElement.style.left = `${x}%`;
-        iconElement.style.top = `${y}%`;
-        return iconElement;
-    }
-
-    icons.forEach(icon => {
-        const x = Math.random() * 100;
-        const y = Math.random() * 100;
-        iconContainer.appendChild(createIcon(icon, x, y));
+        iconElement.innerHTML = icon;
+        iconElement.style.top = `${Math.random() * 100}%`;
+        iconElement.style.left = `${Math.random() * 100}%`;
+        iconElement.style.transform = `translate(-50%, -50%) rotate(${Math.random() * 360}deg)`;
+        iconContainer.appendChild(iconElement);
     });
 
-    function animateIcons() {
-        const iconElements = document.querySelectorAll('.tech-icon');
-        iconElements.forEach(icon => {
-            const x = Math.random() * 100;
-            const y = Math.random() * 100;
-            const scale = 0.5 + Math.random() * 1.5;
-            icon.style.left = `${x}%`;
-            icon.style.top = `${y}%`;
-            icon.style.transform = `translate(-50%, -50%) scale(${scale})`;
-        });
-    }
+    // Remove mouse hover animations
+    const mainHeading = document.querySelector('.main-heading');
+    const roleText = document.querySelector('.role');
 
-    setInterval(animateIcons, 3000);
+    const removeMouseEffects = () => {
+        mainHeading.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.5)'; // Static black outline
+        roleText.style.textShadow = '1px 1px 2px rgba(0, 0, 0, 0.5)'; // Static black outline
+    };
 
-    function updateTextShadow(event) {
-        const { clientX, clientY } = event;
-        const centerX = window.innerWidth / 2;
-        const centerY = window.innerHeight / 2;
-        const deltaX = (clientX - centerX) / centerX;
-        const deltaY = (clientY - centerY) / centerY;
-        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-        const maxOffset = 5;
-        const offsetX = deltaX * maxOffset * distance;
-        const offsetY = deltaY * maxOffset * distance;
-
-        const shadow = `
-            ${offsetX}px ${offsetY}px 0 #000,
-            ${-offsetX}px ${-offsetY}px 0 #000,
-            ${offsetY}px ${-offsetX}px 0 #000,
-            ${-offsetY}px ${offsetX}px 0 #000
-        `;
-
-        mainHeading.style.textShadow = shadow;
-        roleText.style.textShadow = shadow;
-    }
-
-    document.addEventListener('mousemove', updateTextShadow);
+    removeMouseEffects();
 });

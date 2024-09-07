@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<!-- lower case i edit -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caitlin Smith - Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional CSS to ensure icons are visible and animated */
+        .icon-container {
+            position: relative;
+            width: 100%;
+            height: 100px; /* Adjust based on your needs */
+            overflow: hidden;
+        }
+
+        .tech-icon {
+            font-size: 2em; /* Adjust size as needed */
+            color: #333;
+            position: absolute;
+            animation: rotate 10s linear infinite, float 3s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
     <!-- Header section with navigation -->
@@ -49,8 +77,9 @@
             </div>
         </div>
     </section>
+
     <div class="container">
-         <!-- About Me section -->
+        <!-- About Me section -->
         <section id="about" class="section">
             <h2>About Me</h2>
             <!-- Video Introduction Section -->
@@ -65,51 +94,52 @@
             
             <p>I am a passionate developer with a keen interest in creating user-friendly web applications. I love learning new technologies and solving complex problems.</p>
             <p>I’m a recent graduate of LaunchCode’s Full Time Web Development course. I also graduated from the University of Missouri - Columbia with a Bachelor’s degree in International Studies and a minor in East Asian Studies. I studied and am fluent in the Korean language as well. I spent around six years teaching English as a second language in South Korea, which was an incredible experience that allowed me to develop strong communication, adaptability and creative problem-solving skills.</p>
-<p>Upon returning to the United States, I realized I wanted to pursue a different career path—one where I could leverage my creativity, attention to detail, and love for technology. Teaching gave me the opportunity to craft engaging lesson plans using new software and technologies, and that’s when I discovered my passion for web development.</p>
-<p>Since then, I’ve been honing my skills in C#, JavaScript, MySQL, and Node.js. During my time with LaunchCode, I worked on a capstone project called 'Itinerary Designer.' This application is designed to help travelers easily plan itineraries that cater to their specific needs and interests, saving them hours of research. It allows users to log, update, and delete itineraries, while providing clear cost calculations for individuals and groups. The project utilized a tech stack including C#, JavaScript, ASP.NET MVC, and MySQL.</p>
-<p>I'm excited to bring my skills and experience to a fast-paced, corporate setting where I can continue to grow professionally. I’m particularly eager to further develop my technical abilities while contributing to a team that values innovation and continuous learning.</p>
-<p> Thank you for taking the time to learn a little about me. I’m looking forward to the opportunity to contribute to your organization and grow as a developer. I hope to connect with you soon!</p>
+            <p>Upon returning to the United States, I realized I wanted to pursue a different career path—one where I could leverage my creativity, attention to detail, and love for technology. Teaching gave me the opportunity to craft engaging lesson plans using new software and technologies, and that’s when I discovered my passion for web development.</p>
+            <p>Since then, I’ve been honing my skills in C#, JavaScript, MySQL, and Node.js. During my time with LaunchCode, I worked on a capstone project called 'Itinerary Designer.' This application is designed to help travelers easily plan itineraries that cater to their specific needs and interests, saving them hours of research. It allows users to log, update, and delete itineraries, while providing clear cost calculations for individuals and groups. The project utilized a tech stack including C#, JavaScript, ASP.NET MVC, and MySQL.</p>
+            <p>I'm excited to bring my skills and experience to a fast-paced, corporate setting where I can continue to grow professionally. I’m particularly eager to further develop my technical abilities while contributing to a team that values innovation and continuous learning.</p>
+            <p> Thank you for taking the time to learn a little about me. I’m looking forward to the opportunity to contribute to your organization and grow as a developer. I hope to connect with you soon!</p>
         </section>
     </div>
+
     <!-- Main content container -->
     <div class="container">
-<!-- Projects section -->
-<section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="carousel-container">
-        <button class="carousel-button prev">&lt;</button>
-        <div class="carousel">
-            <div class="project-slide">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Canal_Grande_Chiesa_della_Salute_e_Dogana_dal_ponte_dell_Accademia.jpg" alt="Itinerary Designer" class="project-image">
-                <h3>Itinerary Designer</h3>
-                <p>Itinerary Designer helps travelers plan personalized itineraries aligned with their specific needs and interests, saving hours of research. The app allows users to create, view, update, and delete multiple itineraries with unique features, and calculates costs per person and party.</p>
-                <div class="project-links">
-                    <a href="https://github.com/Fantasticer-Four/LiftOff-Capstone" target="_blank" class="btn">View Code</a>
-                    <a href="https://www.youtube.com/watch?v=dRRNUsvStOM&t=1s" target="_blank" class="btn">Watch Demo</a>
+        <!-- Projects section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev">&lt;</button>
+                <div class="carousel">
+                    <div class="project-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Canal_Grande_Chiesa_della_Salute_e_Dogana_dal_ponte_dell_Accademia.jpg" alt="Itinerary Designer" class="project-image">
+                        <h3>Itinerary Designer</h3>
+                        <p>Itinerary Designer helps travelers plan personalized itineraries aligned with their specific needs and interests, saving hours of research. The app allows users to create, view, update, and delete multiple itineraries with unique features, and calculates costs per person and party.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Fantasticer-Four/LiftOff-Capstone" target="_blank" class="btn">View Code</a>
+                            <a href="https://www.youtube.com/watch?v=dRRNUsvStOM&t=1s" target="_blank" class="btn">Watch Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-slide">
+                        <img src="/api/placeholder/400/300" alt="Project 2" class="project-image">
+                        <h3>Project 2</h3>
+                        <p>This is a placeholder for my second project. It had great key features and technologies used in it.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn">View Code</a>
+                            <a href="#" target="_blank" class="btn">Watch Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-slide">
+                        <img src="/api/placeholder/400/300" alt="Project 3" class="project-image">
+                        <h3>Project 3</h3>
+                        <p>This is a placeholder for my third project.This has information about my actual project, explaining its purpose and the problems it solves.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn">View Code</a>
+                            <a href="#" target="_blank" class="btn">Watch Demo</a>
+                        </div>
+                    </div>
                 </div>
+                <button class="carousel-button next">&gt;</button>
             </div>
-            <div class="project-slide">
-                <img src="/api/placeholder/400/300" alt="Project 2" class="project-image">
-                <h3>Project 2</h3>
-                <p>This is a placeholder for my second project. It had great key features and technologies used in it.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank" class="btn">View Code</a>
-                    <a href="#" target="_blank" class="btn">Watch Demo</a>
-                </div>
-            </div>
-            <div class="project-slide">
-                <img src="/api/placeholder/400/300" alt="Project 3" class="project-image">
-                <h3>Project 3</h3>
-                <p>This is a placeholder for my third project.This has information about my actual project, explaining its purpose and the problems it solves.</p>
-                <div class="project-links">
-                    <a href="#" target="_blank" class="btn">View Code</a>
-                    <a href="#" target="_blank" class="btn">Watch Demo</a>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-button next">&gt;</button>
-    </div>
-</section>
+        </section>
 
         <!-- Experience section -->
         <section id="experience" class="section">
@@ -124,111 +154,62 @@
         </section>
     </div>
 
-    <!-- Footer with contact information -->
-    <footer id="contact">
+    <!-- Footer section -->
+    <footer>
         <div class="container">
-            <h3>Contact Me</h3>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/caitlin-smith-669719186/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/caitlinrsmith" target="_blank">GitHub</a></li>
-                <li><a href="mailto:catie12smith@gmail.com">Email</a></li>
-            </ul>
+            <p>&copy; 2024 Caitlin Smith. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript -->
     <script>
-        // Updated data for experience and education from resume
-        const experiences = [
-            {
-                title: 'Web Developer',
-                company: 'BWorks Inventory System — STL | Hack Accelerator Project',
-                year: 'August 2024 - Present',
-                description: [
-                    'Created a tailored web application according to the users’ specifications.',
-                    'Partnered with stakeholders to make recommendations for hardware/software solutions.',
-                    'Engaged in collaborative consultation to provide an innovative and scalable inventory system.',
-                    'Informed clients of progress, concerns, issues, or other matters pertaining to the project.',
-                    'Utilized strong organizational and time management skills to maximize quality output.',
-                    'Tech Stack: Angular, Firebase, Javascript'
-                ]
-            },
-            {
-                title: 'Itinerary Designer',
-                company: 'LaunchCode Capstone Project',
-                year: '',
-                description: [
-                    'Curated travel itinerary events according to users’ desired specifications.',
-                    'Wrote code, monitored, maintained, tested, and debugged a web application.',
-                    'Designed tests and utilized test-driven development skills to ensure quality, safety, and reliability.',
-                    'Developed an event form to filter events based on user preferences, such as restaurant or boat trip.',
-                    'Tech Stack: C#, JavaScript, React, ASP.NET Core, MySQL, Node.js, Free Forex API, CSS (Bootstrap, Flexbox, Grid)'
-                ]
-            },
-            {
-                title: 'Private Instructor',
-                company: 'Self-employed',
-                year: 'January 2018 - Present',
-                description: [
-                    'Curated detailed lesson plans and instruction techniques for 100+ individuals’ requirements.',
-                    'Arranged professional environments supportive to a diverse range of students’ learning.',
-                    'Fostered a collaborative and productive environment for producing high-quality work.'
-                ]
-            },
-            {
-                title: 'Lead Instructor',
-                company: 'Literacy KC',
-                year: 'January 2024 - March 2024',
-                description: [
-                    'Maintained accurate and current documentation of learner progression for 30+ individuals.',
-                    'Targeted instruction to achieve a 10% or greater improvement in a skill set for each learner.',
-                    'Composed scaffolded lessons according to 20+ various learner needs and experiences.'
-                ]
-            },
-            {
-                title: 'Bather',
-                company: 'PetSmart Grooming Salon Shawnee, KS',
-                year: 'December 2022 - December 2023',
-                description: [
-                    'Met with 15+ customers per day to assess needs and provide satisfactory solutions.',
-                    'Optimized time management and collaborated with coworkers to maximize quality output.',
-                    'Provided clear expectations, updates, and summaries of grooms to customers.'
-                ]
-            }
-        ];
-    
-        const education = [
-            { degree: 'Web Development', school: 'LaunchCode', year: '2024' },
-            { degree: 'Bachelors of Arts, International Studies, Korean Language', school: 'University of Missouri - Columbia', year: '2017' }
-        ];
-    
-        // Function to create and append elements to a parent element
-        function populateSection(data, parentId, createElementFunction) {
-            const parentElement = document.getElementById(parentId);
-            data.forEach(item => {
-                const element = createElementFunction(item);
-                parentElement.appendChild(element);
+        document.addEventListener('DOMContentLoaded', () => {
+            const icons = [
+                'fab fa-html5',
+                'fab fa-css3-alt',
+                'fab fa-js',
+                'fab fa-react',
+                'fab fa-node',
+                'fas fa-database',
+                'fas fa-cloud'
+            ];
+
+            const iconContainer = document.getElementById('icon-container');
+
+            icons.forEach((iconClass, index) => {
+                const icon = document.createElement('i');
+                icon.className = `tech-icon ${iconClass}`;
+                icon.style.left = `${(index * 80) % (iconContainer.offsetWidth + 80)}px`; // Distribute icons horizontally
+                iconContainer.appendChild(icon);
             });
-        }
-    
-        // Create experience list item
-        function createExperienceElement(exp) {
-            const item = document.createElement('div');
-            const description = exp.description ? `<ul>${exp.description.map(desc => `<li>${desc}</li>`).join('')}</ul>` : '';
-            item.innerHTML = `<h3>${exp.title} at ${exp.company}</h3><p>${exp.year}</p>${description}`;
-            return item;
-        }
-    
-        // Create education list item
-        function createEducationElement(edu) {
-            const item = document.createElement('div');
-            item.innerHTML = `<h3>${edu.degree}</h3><p>${edu.school}, ${edu.year}</p>`;
-            return item;
-        }
-    
-        // Populate experience and education sections
-        populateSection(experiences, 'experience-list', createExperienceElement);
-        populateSection(education, 'education-list', createEducationElement);
+
+            // Experience and Education placeholders
+            document.getElementById('experience-list').innerHTML = `
+                <h3>Software Developer</h3>
+                <p>Company Name, Location - Dates</p>
+                <ul>
+                    <li>Developed and maintained web applications using C# and ASP.NET Core.</li>
+                    <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                    <li>Performed code reviews and debugging.</li>
+                </ul>
+                <h3>IT Support Specialist</h3>
+                <p>Company Name, Location - Dates</p>
+                <ul>
+                    <li>Provided technical support and troubleshooting for hardware and software issues.</li>
+                    <li>Managed and maintained IT infrastructure and systems.</li>
+                    <li>Trained end-users on software applications and best practices.</li>
+                </ul>
+            `;
+
+            document.getElementById('education-list').innerHTML = `
+                <h3>Bachelor’s Degree in International Studies</h3>
+                <p>University of Missouri - Columbia</p>
+                <p>Graduated: 20XX</p>
+                <h3>Minor in East Asian Studies</h3>
+                <p>University of Missouri - Columbia</p>
+                <p>Graduated: 20XX</p>
+            `;
+        });
     </script>
-    
-    <script src="project-carousel.js"></script>
 </body>
 </html>
