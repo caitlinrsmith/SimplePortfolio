@@ -1,9 +1,9 @@
 /* Basic reset and font settings */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 /* Container for centering content */
@@ -70,9 +70,10 @@ header a:hover {
 }
 
 /* Showcase (hero) section styles */
+/* Showcase (hero) section styles */
 #showcase {
     min-height: 400px;
-    background: url('https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg') no-repeat center center/cover;
+    background: linear-gradient(to right, #9333ea, #3b82f6); /* Gradient background */
     text-align: center;
     color: #fff;
 }
@@ -87,12 +88,6 @@ header a:hover {
     font-size: 20px;
 }
 
-/* Common section styles */
-.section {
-    padding: 20px 0;
-    background: #f4f4f4;
-    margin-top: 20px;
-}
 
 /* Project styles */
 .project {
@@ -112,6 +107,7 @@ header a:hover {
     margin-top: 15px;
 }
 
+/* Button styles */
 .btn {
     display: inline-block;
     background: #0077be;
@@ -160,6 +156,7 @@ footer a:hover {
     color: #0077be;
 }
 
+/* Animation styles */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -176,9 +173,8 @@ footer a:hover {
 }
 
 @keyframes popIn {
-    0% { transform: scale(0.8); opacity: 0; }
-    70% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 1; }
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 .animate-fade-in {
@@ -201,9 +197,61 @@ footer a:hover {
 .animate-pop-in:nth-child(1) { animation-delay: 0.1s; }
 .animate-pop-in:nth-child(2) { animation-delay: 0.2s; }
 .animate-pop-in:nth-child(3) { animation-delay: 0.3s; }
-.animate-pop-in:nth-child(4) { animation-delay: 0.4s; }
-.animate-pop-in:nth-child(5) { animation-delay: 0.5s; }
 
+/* Showcase from second CSS snippet */
+.showcase {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to right, #9333ea, #3b82f6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content {
+    text-align: center;
+    z-index: 10;
+}
+
+.main-heading {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    transition: text-shadow 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+.role {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    animation: slideInLeft 1s ease-out;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill {
+    background-color: white;
+    color: #9333ea;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    animation: popIn 0.5s ease-out;
+}
+
+.description, .goal {
+    max-width: 600px;
+    margin: 1rem auto;
+    animation: slideInRight 1s ease-out;
+}
+
+/* Carousel styles */
 .carousel-container {
     position: relative;
     max-width: 800px;
@@ -251,8 +299,7 @@ footer a:hover {
     right: 10px;
 }
 
-
-/* video css */
+/* Video CSS */
 #video-intro {
     background-color: #f3f4f6;
 }
@@ -275,4 +322,17 @@ footer a:hover {
     height: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gear icons animation at header */
+.icon-container {
+    position: absolute;
+    inset: 0;
+}
+
+.tech-icon {
+    position: absolute;
+    font-size: 2rem;
+    color: #1e3a8a;
+    transition: all 1s ease-in-out;
 }
