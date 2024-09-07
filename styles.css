@@ -20,7 +20,7 @@ header {
     color: #fff;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #0077be 3px solid;
+    border-bottom: #3b82f6 3px solid; /* Blue from hero gradient */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -60,19 +60,19 @@ header nav {
 }
 
 header .highlight, header .current a {
-    color: #0077be;
+    color: #3b82f6; /* Updated to blue from hero gradient */
     font-weight: bold;
 }
 
 header a:hover {
-    color: #cccccc;
+    color: #9333ea; /* Updated to purple from hero gradient */
     font-weight: bold;
 }
 
 /* Showcase (hero) section styles */
 #showcase {
     min-height: 400px;
-    background: linear-gradient(to right, #9333ea, #3b82f6); /* Gradient background */
+    background: linear-gradient(to right, #9333ea, #3b82f6);
     text-align: center;
     color: #fff;
 }
@@ -81,7 +81,6 @@ header a:hover {
     margin-top: 100px;
     font-size: 55px;
     margin-bottom: 10px;
-    /* Adding a simple black outline */
     text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
 }
 
@@ -110,7 +109,7 @@ header a:hover {
 /* Button styles */
 .btn {
     display: inline-block;
-    background: #0077be;
+    background: #3b82f6; /* Blue from hero gradient */
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -122,7 +121,7 @@ header a:hover {
 }
 
 .btn:hover {
-    background: #005fa3;
+    background: #2563eb; /* Darker shade of the blue for hover effect */
 }
 
 /* Footer styles */
@@ -153,7 +152,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #0077be;
+    color: #3b82f6; /* Updated to blue from hero gradient */
 }
 
 /* Animation styles */
@@ -220,7 +219,6 @@ footer a:hover {
     margin-bottom: 1rem;
     transition: text-shadow 0.3s ease;
     animation: fadeIn 1s ease-out;
-    /* Adding a simple black outline */
     text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
 }
 
@@ -228,7 +226,6 @@ footer a:hover {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     animation: slideInLeft 1s ease-out;
-    /* Adding a simple black outline */
     text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
 }
 
