@@ -19,3 +19,20 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const videoContainer = document.querySelector('.video-container');
+    const videoIframe = videoContainer.querySelector('iframe');
+
+    // Lazy load the video when it comes into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                videoIframe.src = videoIframe.dataset.src;
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(videoContainer);
+});
