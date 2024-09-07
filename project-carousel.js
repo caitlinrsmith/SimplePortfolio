@@ -60,3 +60,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(animateIcons, 3000);
 });
+
+// Function to create an education item
+function createEducationItem(edu) {
+    return `
+        <div class="education-item">
+            <h3>${edu.degree}</h3>
+            <p><strong>${edu.school}</strong></p>
+            <p>${edu.year}</p>
+        </div>
+    `;
+}
+
+// Function to create an experience item
+function createExperienceItem(exp) {
+    return `
+        <div class="experience-item">
+            <h3>${exp.title} - ${exp.company}</h3>
+            <p><strong>${exp.year}</strong></p>
+            <ul>
+                ${exp.description.map(desc => `<li>${desc}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+}
+
+// Populate education section
+document.getElementById('education-section').innerHTML = education.map(createEducationItem).join('');
+
+// Populate experience section
+document.getElementById('experience-section').innerHTML = experiences.map(createExperienceItem).join('');
