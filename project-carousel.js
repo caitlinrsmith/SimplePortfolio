@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Showcase functionality
     const iconContainer = document.getElementById('icon-container');
-    const mainHeading = document.getElementById('main-heading');
-    const roleText = document.getElementById('role-text');
 
     const icons = [
         `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-camera"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>`,
@@ -61,28 +59,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     setInterval(animateIcons, 3000);
-
-    function updateTextShadow(event) {
-        const { clientX, clientY } = event;
-        const centerX = window.innerWidth / 2;
-        const centerY = window.innerHeight / 2;
-        const deltaX = (clientX - centerX) / centerX;
-        const deltaY = (clientY - centerY) / centerY;
-        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-        const maxOffset = 5;
-        const offsetX = deltaX * maxOffset * distance;
-        const offsetY = deltaY * maxOffset * distance;
-
-        const shadow = `
-            ${offsetX}px ${offsetY}px 0 #000,
-            ${-offsetX}px ${-offsetY}px 0 #000,
-            ${offsetY}px ${-offsetX}px 0 #000,
-            ${-offsetY}px ${offsetX}px 0 #000
-        `;
-
-        mainHeading.style.textShadow = shadow;
-        roleText.style.textShadow = shadow;
-    }
-
-    document.addEventListener('mousemove', updateTextShadow);
 });
